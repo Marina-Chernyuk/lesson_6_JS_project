@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="virwport" content="width=device-width,initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://kit.fontawesome.com/ee2ef8f203.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header class="header container">
+            <a href="index.html" class="header__logo logo_site"><img class="logo_img" src="img/logo.png" alt="logo">
+                <span class="logo_site_text">techn</span><span class="oo">o</span></a>
+            <form class="header__form" action="#" @submit.prevent="">
+                <div class="header__block">
+                    <button class="header__browse">Browse</button>
+                </div>
+                <div class="header__block_cearch">
+                    <input class="header__input" type="text" placeholder="Search for Item..." v-model.lazy="userSearch">
+                    <button type="submit" class="header__cearch"><span class="loupe"></span></button>
+                </div>
+            </form>
+            <div class="header__control">
+                <div class="header__control_cart">
+                    <cart ref="cart"></cart>
+                </div>
+            </div>
+            <div class="header__control_button">
+                <button class="header__control_button_office">My Account</button>
+            </div>
+    </div>
+    </header>
+    <nav class="container nav__menu">
+        <a href="index.html" class="nav__menu_a">home </a>
+        <a href="#" class="nav__menu_a">notebook</a>
+        <a href="#" class="nav__menu_a">mouse</a>
+        <a href="#" class="nav__menu_a">keyboard</a>
+        <a href="#" class="nav__menu_a">gamepad</a>
+        <a href="#" class="nav__menu_a">accoseriese</a>
+        <a href="#" class="nav__menu_a">hot deals</a>
+    </nav>
+    <main class="content_box">
+        <div class="product container">
+            <products ref="products"></products>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">&#169; 2021 Techno All Rights Reserved</p>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
